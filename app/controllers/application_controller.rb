@@ -7,4 +7,13 @@ class App < Sinatra::Base
     get '/' do
       erb :index
     end
+
+    post '/teams' do
+      @team = Team.new(params[:team])
+
+      params[:team][:heroes].each do |details|
+      end
+      @heroes = Hero.all
+    end
+    
 end
